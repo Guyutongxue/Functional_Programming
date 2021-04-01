@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Create new Racket file",
+            "type": "shell",
+            "command": "${workspaceFolder}/new.sh ${input:name}",
+            "problemMatcher": [],
+            "presentation": {
+                "echo": false,
+                "reveal": "never",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "name",
+            "description": "Location of new file",
+            "default": "temp/temp.rkt",
+            "type": "promptString"
+        }
+    ]
+}

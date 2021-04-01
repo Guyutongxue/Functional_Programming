@@ -14,4 +14,7 @@ if [ -f $1 ]; then
     exit 1
 fi
 
-echo "#lang racket" > $1
+mkdir -p $(dirname "$1") && touch "$1" && {
+    echo "#lang racket" > $1;
+    code -r -g $1:2;
+}
